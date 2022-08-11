@@ -175,18 +175,24 @@
             <!-- INPUT PARA EL TIPO DE NEGOCIO -->
             <div class="form-group">
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-building"></i> Tipo de Negocio</span>
-                <select class="form-control input-lg" name="nuevoTipoNegocio">
-                  <option value="">Seleccionar Tipo de Negocio</option>     
-                  <option value="Farmacia">Farmacia</option>
-                  <option value="Ciber">Ciber</option>
-                  <option value="Restaurante">Restaurante</option>
-                  <option value="Miscelanea">Miscelanea</option>
-                  <option value="Papeleria">Papeleria</option>
-                  <option value="Boutique">Boutique</option>             
-                </select>
+                <span class="input-group-addon"><i class="fa fa-align-center"></i> Negocio</span>
+                <select class="form-control input-lg" name="nuevoNegocio">
+                  <option value="">Seleccionar Negocio</option>
+                  <?php 
+                    $item = null;
+                    $valor = null;
+                    $negocios = ControladorNegocios::ctrMostrarNegocios($item, $valor);
+                    //var_dump($categorias);
+                    foreach($negocios as $key => $value ) {
+                      echo '
+                      <option value="'.$value["negocio"].'">'.$value["negocio"].'</option>                  
+                      ';
+                    }
+                  ?>
+                </select>                
               </div>
-            </div> 
+            </div>  
+
           </div>
         </div>
 
@@ -305,18 +311,24 @@
             <!-- INPUT PARA EL TIPO DE NEGOCIO -->
             <div class="form-group">
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-align-center"></i> Editar Tipo Negocio</span>
+                <span class="input-group-addon"><i class="fa fa-align-center"></i> Editar Negocio</span>
                 <select class="form-control input-lg" name="editarNegocio">
                   <option value="" id="editarNegocio"></option>
-                  <option value="Farmacia">Farmacia</option>
-                  <option value="Ciber">Ciber</option>
-                  <option value="Restaurante">Restaurante</option>
-                  <option value="Miscelanea">Miscelanea</option>
-                  <option value="Papeleria">Papeleria</option>
-                  <option value="Boutique">Boutique</option>
+                  <?php 
+                    $item = null;
+                    $valor = null;
+                    $negocios = ControladorNegocios::ctrMostrarNegocios($item, $valor);
+                    //var_dump($categorias);
+                    foreach($negocios as $key => $value ) {
+                      echo '
+                      <option value="'.$value["negocio"].'">'.$value["negocio"].'</option>                  
+                      ';
+                    }
+                  ?>
                 </select>
               </div>
-            </div>
+            </div> 
+            
 
           </div>
         </div>

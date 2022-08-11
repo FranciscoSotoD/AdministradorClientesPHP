@@ -19,6 +19,12 @@
                     <span>Categorías</span>
                 </a>
             </li>
+            <li>
+                <a href="negocios">
+                    <i class="fa fa-th"></i>
+                    <span>Negocios</span>
+                </a>
+            </li>
 
         </ul>
 

@@ -12,6 +12,10 @@
     //var_dump($categorias);
     $totalCategorias = count($categorias);
 
+    $negocios = ControladorNegocios::ctrMostrarNegocios($item, $valor);
+    //var_dump($negocios);
+    $totalNegocios = count($negocios);
+
 ?>
 
 <div class="col-lg-6 col-xs-6">
@@ -28,7 +32,6 @@
         <a href="usuarios" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
     </div>
 </div>
-<!-- ./col -->
 <div class="col-lg-6 col-xs-6">
     <!-- small box -->
     <div class="small-box bg-green">
@@ -41,5 +44,19 @@
             <i class="ion ion-stats-bars"></i>
         </div>
         <a href="categorias" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+<div class="col-lg-6 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-yellow">
+        <div class="inner">
+            <h3><?php echo number_format($totalNegocios); ?></h3>
+
+            <p>Total de Negocios</p>
+        </div>
+        <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+        </div>
+        <a href="negocios" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
     </div>
 </div>

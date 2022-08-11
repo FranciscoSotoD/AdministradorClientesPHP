@@ -18,7 +18,7 @@ class ControladorClientes {
                                "telefono" => $_POST["nuevoTelefono"],
                                "categoria" => $_POST["nuevoCategoria"],
                                "estado" => $_POST["nuevoEstado"],
-                               "negocio" => $_POST["nuevoTipoNegocio"] );
+                               "negocio" => $_POST["nuevoNegocio"], );
                 
                 $respuesta = ModeloClientes::mdlIngresarCliente($tabla, $datos);
 

@@ -51,6 +51,7 @@
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "usuarios" ||
          $_GET["ruta"] == "categorias" ||
+         $_GET["ruta"] == "negocios" ||
          $_GET["ruta"] == "salir" ) {
         include "modulos/".$_GET["ruta"].".php";
       } else {
@@ -89,5 +90,6 @@
 <script src="vistas/js/plantilla.js"></script>
 <script src="vistas/js/clientes.js"></script>
 <script src="vistas/js/categorias.js"></script>
+<script src="vistas/js/negocios.js"></script>
 </body>
 </html>
